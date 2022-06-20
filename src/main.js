@@ -1,19 +1,14 @@
 import Vue from 'vue'
-// import App from './App.vue'
-// import App from './components/day1/01-test.vue'
-// import App from './components/day1/02-插值.vue'
-// import App from './components/day1//05-v-module使用.vue'
-// import App from './components/day1/practice.vue'
-// import App from './components/day2/03-practice.vue'
-// import App from './components/day2/04-test.vue'
-// import App from './components/day2/05-fliter使用.vue'
-import App from './components/day03/03-father.vue'
-
-// 引入样式文件
-import './styles/reset.css'
-import './styles/bootstrap.css'
+import App from './App.vue'
+import axios from 'axios'
+// import './assets/index.less'
+import 'bootstrap/dist/css/bootstrap.css'
+// 基地址配置
+axios.defaults.baseURL = 'https://www.escook.cn'
+// 将axios方法添加到Vue原型上
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  render: h => h(App)
 }).$mount('#app')
